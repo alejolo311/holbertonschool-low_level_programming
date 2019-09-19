@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - entry point
- * Desc: Use `putchar` function to print the alphabet.
+ * Desc: Use `print for pirnt some numbers.
  * Return: 0
 */
 int main(void)
