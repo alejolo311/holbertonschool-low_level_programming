@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - entry point
- * Desc: Use `print for pirnt some numbers.
+ * Desc: Use `print for print some last  numbers.
  * Return: 0
 */
 int main(void)
