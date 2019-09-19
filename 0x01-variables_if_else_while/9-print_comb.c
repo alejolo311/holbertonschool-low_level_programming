@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char number = '0';
+	int number = '0';
 
 	while (number <= '9')
 	{
@@ -18,5 +18,6 @@ int main(void)
 		}
 		number++;
 	}
+	putchar('\n');
 	return (0);
 }
