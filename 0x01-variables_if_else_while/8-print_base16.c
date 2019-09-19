@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int number = '1';
+	int number = '0';
 	char letter = 'a';
 
 	while (number <= '9')
