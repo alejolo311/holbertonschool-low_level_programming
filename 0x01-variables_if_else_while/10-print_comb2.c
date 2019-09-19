@@ -8,25 +8,24 @@ int main(void)
 {
 	int i, j, k;
 
-	j = '0';
-	k = '0';
+	j = 48;
+	k = 48;
 
-	for (i = 0; i <= 90; i++)
+	for (i = 0; i < 100; i++)
 	{
 		putchar(j);
 		putchar(k);
-
-		if (k == '9')
-		{
-			k = '0';
-			j++;
-		}
-		if (i < 90)
+		if (i < 99)
 		{
 			putchar(44);
 			putchar(32);
-			k++;
 		}
+		if (k == 57)
+		{
+			j++;
+			k = 47;
+		}
+		k++;
 	}
 	putchar('\n');
 
