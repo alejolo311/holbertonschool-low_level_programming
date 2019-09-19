@@ -6,24 +6,26 @@
  */
 int main(void)
 {
-	int number_1 = '0';
-	int number_2 = '0';
+	int i, j, k;
 
+	j = '0';
+	k = '0';
 
-	while (number_1 <= '8')
+	for (i = 0; i <= 90; i++)
 	{
-		putchar(number_1);
-		putchar(number_2);
-		number_2++;
-		if (number_2 == '9')
+		putchar(j);
+		putchar(k);
+
+		if (k == '9')
 		{
-			number_2 = '0';
-			number_1++;
+			k = '0';
+			j++;
 		}
-		if (number_2 < '9')
+		if (i < 90)
 		{
 			putchar(44);
 			putchar(32);
+			k++;
 		}
 	}
 	putchar('\n');
