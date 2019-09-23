@@ -11,13 +11,13 @@ int main(void)
 
 	for (i = 0; i < 100; i++)
 	{
-		q = i / 10; /* doubles fnum */
-		w = i % 10; /* singles fnum */
+		q = i / 10;
+		w = i % 10;
 
 		for (j = 0; j < 100; j++)
 		{
-			e = j / 10; /* doubles snum */
-			r = j % 10; /* singles snum */
+			e = j / 10;
+			r = j % 10;
 
 			if (q < e || (q == e && w < r))
 			{
