@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  * print_sign - This functions prints the symbols of some numbers
+ * @c: this value is a integer.
 (* a blank line
  * Description: this function print the symbol of some numbers)?
 (* section header: the header file for this function is holberton.h)*

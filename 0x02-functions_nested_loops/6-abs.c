@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  * _abs - This functions prints the absolute value of a integer
+ * @c: this parameter is a integer.
 (* a blank line
  * Description: this function print the absolute value of a integer)?
 (* section header: the header file for this function is holberton.h)*

@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
  * print_last_digit - This functions prints the lasgt digit of a integer
+ * @c: this parameter is a integer.
 (* a blank line
  * Description: this function print the last digite of a integer)?
 (* section header: the header file for this function is holberton.h)*
@@ -10,7 +11,7 @@ int print_last_digit(int c)
 {
 	int to_positive, last_digit;
 
-	if (c < 0 )
+	if (c < 0)
 	{
 		to_positive = c * -1;
 		last_digit = to_positive % 10;
