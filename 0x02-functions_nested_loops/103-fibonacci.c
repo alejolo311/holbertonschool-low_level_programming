@@ -11,19 +11,19 @@ int main(void)
 
 	fib1 = 0;
 	fib2 = 1;
-	fib = 0;
 	add = 0;
 
-	do {
-		if (fib2 % 2 == 0)
-		{
-			add = add + fib2;
-		}
+	for (i = 0; i < 40; i++)
+	{
 		fib = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = fib;
-	} while (fib2 < 4000000);
+		if (fib < 4000000 && (fib % 2) == 0)
+		{
+			add = add + fib;
+		}
 
+	}
 	printf("%ld\n", add);
 
 	return (0);
