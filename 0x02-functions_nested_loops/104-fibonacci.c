@@ -18,9 +18,9 @@ int main(void)
 		fib1 = fib2;
 		fib2 = fib;
 		if (i != 97)
-			printf("%0.f, ", fib);
+			printf("%e", fib);
 		else
-			printf("%0.f\n", fib);
+			printf("%e", fib);
 	}
 
 		return (0);
