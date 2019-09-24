@@ -1,8 +1,10 @@
 #include "holberton.h"
-/*
- * main - entry point
- * desc: this program use _putchar to print "holberton"
- * return - always 0
+/**
+ * main - Entry point
+(* a blank line
+* Description: this function prints holberton usign _putchar)?
+(* section header: the header file for this function is holberton.h)*
+* Return: return 0
  */
 int main(void)
 {
