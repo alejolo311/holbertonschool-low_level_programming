@@ -1,5 +1,23 @@
 #include "holberton.h"
 /**
+ * print_spaces - This functions prints commas and spaces
+ * @n: is a intenger define the number of spaces
+(* a blank line
+* Description: this function prints spaces)?
+* Return: no return a void function.
+ */
+void print_spaces(int n)
+{
+	int i;
+
+	_putchar(',');
+
+	for (i = 0; i < n; i++)
+	{
+		_putchar(' ');
+	}
+}
+/**
  * print_times_table - This functions prints times table
  * @n: the table to print
 (* a blank line
@@ -21,23 +39,11 @@ void print_times_table(int n)
 
 			r = table * number;
 			if (number && r < 10)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-			}
+				print_spaces(3);
 			else if (r >= 10 && r < 100)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
+				print_spaces(2);
 			else if (r >= 100)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+				print_spaces(1);
 			if (r >= 10 && r < 100)
 			{
 				_putchar((r / 10) + '0');
