@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
  * add - This functions adds two numbers
+ * @n: the first parameter to add
+ * @n2: the second parameter
 (* a blank line
  * Description: this function print the add og two numbers)?
 (* section header: the header file for this function is holberton.h)*

@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * print_to_98 - This functions prints numbers to 98
+ * @c: the paramater to print and go to 98
 (* a blank line
  * Description: this function print numbers to 98)?
 (* section header: the header file for this function is holberton.h)*
