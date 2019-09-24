@@ -1,10 +1,11 @@
 #include "holberton.h"
 /**
  * _islower - This functions says if a characters is lowercase
+ * @c: this parameter recieve a int value
 (* a blank line
  * Description: this function detect if a charecter is lower or note)?
 (* section header: the header file for this function is holberton.h)*
- * Return: this funcion return 1 if the value is lower, return 0 in other cases.
+ * Return: this funcion return 1 if the value is lower, return 0.
  */
 int _islower(int c)
 {
