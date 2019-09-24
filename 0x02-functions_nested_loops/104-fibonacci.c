@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long  i, fib, fib1, fib2;
+	long double  i, fib, fib1, fib2;
 
 	fib1 = 0;
 	fib2 = 1;
@@ -18,9 +18,9 @@ int main(void)
 		fib1 = fib2;
 		fib2 = fib;
 		if (i != 97)
-			printf("%lu, ", fib);
+			printf("%0.Lf, ", fib);
 		else
-			printf("%lu\n", fib);
+			printf("%0.Lf\n", fib);
 	}
 
 		return (0);
