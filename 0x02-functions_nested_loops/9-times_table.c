@@ -17,6 +17,18 @@ void  times_table(void)
 			int r;
 
 			r = table * number;
+
+			if (number && r < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else if (r >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			if (r >= 10)
 			{
 				_putchar((r / 10) + '0');
@@ -25,25 +37,6 @@ void  times_table(void)
 			else
 			{
 				_putchar(r + '0');
-			}
-			if ( number == 9)
-			{
-				;
-			}
-			else if (((r * 1.5) >= 10) && number != 5)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-			else if (number == 5 && (r*2) > 10)
-			{
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
 			}
 		}
 		_putchar('\n');
