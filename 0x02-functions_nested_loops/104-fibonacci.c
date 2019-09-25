@@ -1,28 +1,41 @@
 #include <stdio.h>
 /**
- * main - entry point
-(* a blank line
-* Description: this function prints the fibonnaci numbers until 50.
-* Return: always return 0
+ * main - main block
+ * Description: Find fibonacci until 98
+ * Return: 0
  */
 int main(void)
 {
-        double  i, fib, fib1, fib2;
+	unsigned long int longest ,fib3 = 0, fib1 = 1, fib4 = 0, fib2 = 2;
+	unsigned long int var1, var2, var3;
+	int counter;
 
-	fib1 = 0;
-	fib2 = 1;
+	longest = 1000000000;
 
-	for (i = 0; i < 98; i++)
+	printf("%lu, %lu, ", fib1, fib2);
+	for (counter = 2; counter < 98; counter++)
 	{
-		fib = fib1 + fib2;
-		fib1 = fib2;
-		fib2 = fib;
-		if (i != 97)
-			printf("%e", fib);
+		if (fib1 + fib2 > longest || fib4 > 0 || fib3 > 0)
+		{
+			var1 = (fib1 + fib2) / longest;
+			var2 = (fib1 + fib2) % longest;
+			var3 = fib3 + fib4 + var1;
+			fib3 = fib4;
+			fib4 = var3;
+			fib1 = fib2;
+			fib2 = var2;
+			printf("%lu%010lu", fib4, fib2);
+		}
 		else
-			printf("%e", fib);
+		{
+			var2 = fib1 + fib2;
+			fib1 = fib2;
+			fib2 = var2;
+			printf("%lu", fib2);
+		}
+		if (counter != 97)
+			printf(", ");
 	}
-
-		return (0);
-
+	printf("\n");
+	return (0);
 }
