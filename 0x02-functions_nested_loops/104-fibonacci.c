@@ -1,16 +1,15 @@
-#include <stdlib.h>
 #include <stdio.h>
-
 /**
  * main - print fibonacci numbers.
- *
+ * desc: this program print the fibonacci number until 98
  * Return: Always 0.
  */
 int main(void)
 {
-	int i = 0;
+	int i;
 	unsigned long fib1, fib2, fib3, fib4, fib5, fib6;
 
+	i = 0;
 	fib1 = 1, fib2 = 2;
 	while (i < 90)
 	{
