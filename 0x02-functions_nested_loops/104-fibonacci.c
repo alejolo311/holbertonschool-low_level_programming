@@ -1,41 +1,44 @@
+#include <stdlib.h>
 #include <stdio.h>
+
 /**
- * main - main block
- * Description: Find fibonacci until 98
- * Return: 0
+ * main - print fibonacci numbers.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	unsigned long int longest ,fib3 = 0, fib1 = 1, fib4 = 0, fib2 = 2;
-	unsigned long int var1, var2, var3;
-	int counter;
+	int i = 0;
+	unsigned long fib1, fib2, fib3, fib4, fib5, fib6;
 
-	longest = 1000000000;
-
-	printf("%lu, %lu, ", fib1, fib2);
-	for (counter = 2; counter < 98; counter++)
+	fib1 = 1, fib2 = 2;
+	while (i < 90)
 	{
-		if (fib1 + fib2 > longest || fib4 > 0 || fib3 > 0)
-		{
-			var1 = (fib1 + fib2) / longest;
-			var2 = (fib1 + fib2) % longest;
-			var3 = fib3 + fib4 + var1;
-			fib3 = fib4;
-			fib4 = var3;
-			fib1 = fib2;
-			fib2 = var2;
-			printf("%lu%010lu", fib4, fib2);
-		}
-		else
-		{
-			var2 = fib1 + fib2;
-			fib1 = fib2;
-			fib2 = var2;
-			printf("%lu", fib2);
-		}
-		if (counter != 97)
-			printf(", ");
+		printf("%lu, %lu, ", fib1, fib2);
+		fib1 += fib2;
+		fib2 += fib1;
+		i += 2;
 	}
-	printf("\n");
+	printf("%lu, %lu, ", fib1, fib2);
+	fib3 = fib1 / 100;
+	fib4 = fib2 / 100;
+	fib5 = fib1 % 100;
+	fib6 = fib2 % 100;
+	while (i < 96)
+	{
+		fib1 = fib3 + fib4;
+		fib2 = fib5 + fib6;
+		fib2 > 99 ? fib1++ : fib2;
+		fib2 = fib2 % 100;
+		printf("%lu", fib1);
+		printf(fib2 < 10 ? "0" : "");
+		printf("%lu", fib2);
+		printf(i < 95 ? ", " : "\n");
+		fib3 = fib4;
+		fib4 = fib1;
+		fib5 = fib6;
+		fib6 = fib2;
+		i++;
+	}
 	return (0);
 }
