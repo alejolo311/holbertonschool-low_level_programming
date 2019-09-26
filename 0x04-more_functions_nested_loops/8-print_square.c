@@ -1,20 +1,24 @@
 #include "holberton.h"
 /**
- * print_line - this function lines
- * @n: larger of the line.
+ * print_square - this function print a square
+ * @size: larger of the square.
 (* a blank line
-* Description: this function prints lines?
+* Description: this function prints a square?
 (* section header: the header of this function is holberton.h)*
 * Return: a void function, no return
 */
-void print_line(int n)
+void print_square(int size)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i < n; i++)
+	size == 0 ? _putchar('\n') : size;
+
+	for (i = 0; i < size; i++)
 	{
-		if (n > 0)
-			_putchar('_');
+		for (j = 0; j < size; j++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
