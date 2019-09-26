@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  * mul - this function multiply two digits
  * @a: the first character to be process

@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  * _isupper - this function says if a character is upper or not.
  * @c: the character to be process
