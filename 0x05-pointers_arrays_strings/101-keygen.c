@@ -1,6 +1,12 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - entry point
+(* a blank line
+* Description: this program is a keygen)?
+* Return: 0 in success.
+ */
 int main(void)
 {
 	int add, i, r;
@@ -15,7 +21,7 @@ int main(void)
 
 	while (add < 2772)
 	{
-		r = rand() % 6;
+		r = rand() % 10;
 		key[i] = ch[r];
 		add += key[i];
 		i++;
