@@ -7,22 +7,19 @@
 (* section header: the header of this function is holberton.h)*
 * Return: this return a char.
 */
-char *rot13(char *a)
+har *rot13(char *a)
 {
 	int j;
+	char charsupp[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char charslow[] = "nopqrstuvwxyzabcdefghijklm";
 
-	for (j = 0; a[j] != '\0'; j++)
+	for (j = 0; s[j] != '\0'; j++)
 	{
-		if ((a[j] >= 'a' && a[j] <= 'm') || (a[j] >= 'A' && a[j] <= 'M'))
+		if ((a[j] >= 'A' && a[j] < 'Z') || (a[j] >= 'a' && a[j] < 'z'))
 		{
-			a[j] = (a[j] + 13);
+			a[j] = (a[j] - 65 > 25) ?
+				charslow[s[i] - 97] : charsupp[s[i] - 65];
 		}
-		else
-			while ((a[j] >= 'n' && a[j] <= 'z') ||
-			       (a[j] >= 'N' && a[j] <= 'Z'))
-			{
-				a[j] = (a[j] - 13);
-			}
 	}
-	return (a);
+	return (s);
 }
