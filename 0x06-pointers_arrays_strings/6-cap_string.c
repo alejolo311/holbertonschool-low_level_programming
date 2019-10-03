@@ -10,7 +10,7 @@
 int isaspace(char a)
 {
 	int i;
-	char spaces[] = "(){},;.!?\n\t\" ";
+	char spaces[] = ",;.!?(){}\n\t\" ";
 
 	for (i = 0; spaces[i] != '\0'; i++)
 	{
