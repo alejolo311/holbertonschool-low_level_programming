@@ -35,7 +35,7 @@ char *cap_string(char *a)
 
 	for (j = 0; a[j] != '\0'; j++)
 	{
-		if((a[j] > 64 && a[j] < 91) || a[j] < 64)
+		if((a[j] > 64 && a[j] < 91))
 		{
 			;
 		}
@@ -43,7 +43,10 @@ char *cap_string(char *a)
 		{
 			a[j] = a[j] - 32;
 		}
-
+		else if (a[j] > 47 && a[j] < 58)
+		{
+			;
+		}
 	}
 	return (a);
 }
