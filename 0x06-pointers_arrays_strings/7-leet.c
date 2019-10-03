@@ -11,7 +11,7 @@ char *leet(char *s)
 {
 	int i, j;
 	char chars[] = "aAeEoOtTlL";
-	char encrypt[] = "43071";
+	char encrypt[] = "4433007711";
 
 	i = 0;
 	while (s[i] != '\0')
@@ -20,7 +20,7 @@ char *leet(char *s)
 		{
 			if (s[i] == chars[j])
 			{
-				s[i] = encrypt[j / 2];
+				s[i] = encrypt[j];
 			}
 		}
 		i++;
