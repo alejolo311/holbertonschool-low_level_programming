@@ -1,39 +1,39 @@
 #include "holberton.h"
 /**
- * leet - mozart
+ * leet - mozart do the music for allte people
 (* a blank line
- *@s: this parameter is the string to encrypt
+ *@a: this parameter is the string to encrypt
 * Description: mozart)?
 (* section header: the header of this function is holberton.h)*
 * Return: this return a char.
 */
-char *leet(char *s)
+char *leet(char *a)
 {
 	int j;
 
-	for (j = 0; s[j] != '\0'; j++)
+	for (j = 0; a[j] != '\0'; j++)
 	{
-		while (s[j] == 'a' || s[j] == 'A')
+		while (a[j] == 'a' || a[j] == 'A')
 		{
-			s[j] = '4';
+			a[j] = '4';
 		}
-		while (s[j] == 'e' || s[j] == 'E')
+		while (a[j] == 'e' || a[j] == 'E')
 		{
-			s[j] = '3';
+			a[j] = '3';
 		}
-		while (s[j] == 'o' || s[j] == 'O')
+		while (a[j] == 'o' || a[j] == 'O')
 		{
-			s[j] = '0';
+			a[j] = '0';
 		}
-		while (s[j] == 't' || s[j] == 'T')
+		while (a[j] == 't' || a[j] == 'T')
 		{
-			s[j] = '7';
+			a[j] = '7';
 		}
-		while (s[j] == 'l' || s[j] == 'L')
+		while (a[j] == 'l' || a[j] == 'L')
 		{
-			s[j] = '1';
+			a[j] = '1';
 		}
 	}
 
-	return (s);
+	return (a);
 }
