@@ -35,7 +35,11 @@ char *cap_string(char *a)
 
 	for (j = 0; a[j] != '\0'; j++)
 	{
-		if ((a[j] > 96 && a[j] < 123) && isaspace(a[j - 1]))
+		if((a[j] > 64 && a[j] < 91) || a[j] < 64)
+		{
+			;
+		}
+		else if ((a[j] > 96 && a[j] < 123) && isaspace(a[j - 1]))
 		{
 			a[j] = a[j] - 32;
 		}
