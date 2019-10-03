@@ -2,38 +2,28 @@
 /**
  * leet - mozart do the music for allte people
 (* a blank line
- *@a: this parameter is the string to encrypt
-* Description: mozart)?
+ *@s: this parameter is the string to encrypt
+* Description: mozart do the music for all the people)?
 (* section header: the header of this function is holberton.h)*
 * Return: this return a char.
 */
-char *leet(char *a)
+char *leet(char *s)
 {
-	int j;
+	int i, j;
+	char chars[] = "aAeEoOtTlL";
+	char encrypt[] = "43071";
 
-	for (j = 0; a[j] != '\0'; j++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		while (a[j] == 'a' || a[j] == 'A')
+		for (j = 0; encrypt[j] != '\0'; j++)
 		{
-			a[j] = '4';
+			if (s[i] == chars[j])
+			{
+				s[i] = encrypt[j / 2];
+			}
 		}
-		while (a[j] == 'e' || a[j] == 'E')
-		{
-			a[j] = '3';
-		}
-		while (a[j] == 'o' || a[j] == 'O')
-		{
-			a[j] = '0';
-		}
-		while (a[j] == 't' || a[j] == 'T')
-		{
-			a[j] = '7';
-		}
-		while (a[j] == 'l' || a[j] == 'L')
-		{
-			a[j] = '1';
-		}
+		i++;
 	}
-
-	return (a);
+	return (s);
 }
