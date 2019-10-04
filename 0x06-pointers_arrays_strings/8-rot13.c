@@ -7,7 +7,7 @@
 (* section header: the header of this function is holberton.h)*
 * Return: this return a char.
 */
-har *rot13(char *a)
+char *rot13(char *a)
 {
 	int j;
 	char charsupp[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
