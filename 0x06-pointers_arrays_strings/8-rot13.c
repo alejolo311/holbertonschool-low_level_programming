@@ -2,24 +2,34 @@
 /**
  * rot13 - this functions encrypt using the rot13 algorithm
 (* a blank line
- *@a: this parameter is the string to encrypt
+ *@s: this parameter is the string to encrypt
 * Description: this function encrypts using the rot13 algorithm)?
 (* section header: the header of this function is holberton.h)*
 * Return: this return a char.
 */
-char *rot13(char *a)
+char *rot13(char *s)
 {
-	int j;
-	char charsupp[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char charslow[] = "nopqrstuvwxyzabcdefghijklm";
 
-	for (j = 0; s[j] != '\0'; j++)
+	char low1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char low2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int c, low_c;
+
+	c = 0;
+	while (*(s + c) != '\0')
 	{
-		if ((a[j] >= 'A' && a[j] < 'Z') || (a[j] >= 'a' && a[j] < 'z'))
+		low_c = 0;
+		while (low1[low_c] != '\0')
 		{
-			a[j] = (a[j] - 65 > 25) ?
-				charslow[s[i] - 97] : charsupp[s[i] - 65];
+			if (*(s + c) == low1[low_c])
+			{
+				*(s + c) = low2[low_c];
+				break;
+			}
+			low_c++;
 		}
+		c++;
 	}
+
 	return (s);
+
 }
