@@ -21,7 +21,7 @@ void print_buffer(char *b, int size)
 		i = 0;
 		while (i < size)
 		{
-			printf("%08x:", i);
+			printf("%08x: ", i);
 			j = 0;
 			while (j < 10)
 			{
