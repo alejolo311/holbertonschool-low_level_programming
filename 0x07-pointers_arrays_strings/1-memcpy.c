@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _memset - this function cpy a buffer
+ * _memcpy - this function cpy a buffer
  * @dest: is a buffer that it contains in array
  * @src: the new value to copy in the buffer
  * @n: the number of bytes to be altered.
