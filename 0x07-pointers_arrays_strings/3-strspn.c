@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _strchr - this function find a charecter ina string
+ * _strspn - this function find char accept to with the words in the string.
  * @s: this is the string
  * @accept: this is the char accepts to build words
  (* a blank line
@@ -14,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	k = 0;
 
- 	for( i = 0; *(s + i) != '\0'; i++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		for (j = 0; *(accept + j) != '\0'; j++)
 		{
