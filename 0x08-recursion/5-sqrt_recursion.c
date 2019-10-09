@@ -1,15 +1,38 @@
 #include "holberton.h"
 /**
- * factorial - this functions prints the factorial of a number
+ * _sqrt_recursion - this functions prints the square root of a number
 (* a blank line
- *@n: this variable is a int , contains the number to be factorized
-* Description: this function prints the factorial of a number?
+ *@n: this variable is a int , contains the number to obtains his square root
+* Description: this function prints the square root of a number?
 (* section header: the header of this function is holberton.h)*
-* Return: retunrn the factorial in int
+* Return: return the square root in int
 */
-int _pow_recursion(int x, int y)
+int _sqrt_recursion(int n)
 {
-	if (y == 0)  return (1);
-	if (y < 0)  return (-1);
-	return (x * _pow_recursion(x, y - 1));
+	if (n < 0)
+		return (-1);
+	else if (n == 0)
+		return (0);
+	else if (n == 1)
+		return (1);
+	else
+		return (real_sqrt(n, 1));
+}
+/**
+ * real_sqrt - this functions is the real
+(* a blank line
+*@n: the number to obtains his square root.
+*@i: this variable is the result.
+* Description: this function return the square root?
+(* section header: the header of this function is holberton.h)*
+* Return: return the square root;
+*/
+int real_sqrt(int n, int i)
+{
+	if (n > (i * i))
+		return (real_sqrt(n, i + 1));
+	else if (n == (i * i))
+		return (i);
+	else
+		return (-1);
 }
