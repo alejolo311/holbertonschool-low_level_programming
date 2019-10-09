@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- * _pow_recursion - this functions prints the factorial of a number
+ * wildcmp - this functions compare two strings
 (* a blank line
- *@s1: this variable is the number to be pow
- *@s2: the pow
-* Description: this function prints the factorial of a number?
+ *@s1: this variable is the fisrts string
+ *@s2: the second string
+* Description: this function compare two strings?
 (* section header: the header of this function is holberton.h)*
-* Return: retunrn the factorial in int
+* Return: return 0 or 1;
 */
 int wildcmp(char *s1, char *s2)
 {
