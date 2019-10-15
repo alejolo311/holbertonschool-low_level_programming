@@ -1,11 +1,10 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * _create_array - this functions create an array.
+ * _strdup - this functions copy a string.
 (* a blank line
- *@size: this is the size of the array.
- *@c: the value to inite the array.
-* Description: this function prints a string)?
+ *@str: the string to copy
+* Description: this function copy a string)?
 (* section header: the header of this function is holberton.h)*
 * Return: this is a void function no return
 */
@@ -17,7 +16,7 @@ char *_strdup(char *str)
 	i = 0;
 	if (str == NULL)
 		return (NULL);
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 		i++;
 	p = malloc(i * sizeof(*str) + 1);
 	if (p == NULL)

@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * _create_array - this functions create an array.
+ * create_array - this functions create an array.
 (* a blank line
  *@size: this is the size of the array.
  *@c: the value to inite the array.
