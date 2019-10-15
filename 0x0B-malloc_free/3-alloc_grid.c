@@ -1,13 +1,13 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * str_concat - this function concatante two strings to a new memory position
+ * alloc_grid - this function allocates a grid.
 (* a blank line
- *@s1: the string dest
- *@s2: the string source
-* Description: this function concatena two strings)?
+ *@width: the width of the grid
+ *@height: the height of the grid
+* Description: this function allocates a grid)?
 (* section header: the header of this function is holberton.h)*
-* Return: this return a char pointer to the string.
+* Return: this return a int pointer to a two dimesional array.
 */
 int **alloc_grid(int width, int height)
 {
