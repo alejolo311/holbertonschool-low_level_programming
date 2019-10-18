@@ -54,8 +54,11 @@ int main(int argc, char *argv[])
 
 	if (argc < 3 || argc > 3 || !(_isdigit(argv[1])) || !(_isdigit(argv[2])))
 		puts("Error"), exit(98);
-	else
+	if (argv[1][0] == '0' || argv[2][0] == '0')
 	{
+		printf("0\n");
+		return (0);
+	}
 	n1 = _strlen(argv[1]);
 	n2 = _strlen(argv[2]);
 	len = n1 + n2;
@@ -87,5 +90,4 @@ int main(int argc, char *argv[])
 	printf("\n");
 	free(total);
 	return (0);
-	}
 }
