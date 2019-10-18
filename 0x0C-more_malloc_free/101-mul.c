@@ -52,11 +52,10 @@ int main(int argc, char *argv[])
 	int p, res, len, n1, n2, i, j;
 	int *total;
 
-	if (argc != 3 || !(_isdigit(argv[1])) || !(_isdigit(argv[2])))
+	if (argc < 3 || argc > 3 || !(_isdigit(argv[1])) || !(_isdigit(argv[2])))
+		puts("Error"), exit(98);
+	else
 	{
-		puts("Error");
-		exit(98);
-	}
 	n1 = _strlen(argv[1]);
 	n2 = _strlen(argv[2]);
 	len = n1 + n2;
@@ -88,4 +87,5 @@ int main(int argc, char *argv[])
 	printf("\n");
 	free(total);
 	return (0);
+	}
 }
