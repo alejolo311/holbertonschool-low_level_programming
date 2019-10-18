@@ -59,8 +59,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	n1 = _strlen(argv[1]);
-	n2 = _strlen(argv[2]);
+	n1 = _strlen(argv[1]), n2 = _strlen(argv[2]);
 	len = n1 + n2;
 	total = calloc(len, sizeof(int *));
 	if (total == NULL)
