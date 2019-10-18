@@ -53,7 +53,10 @@ int main(int argc, char *argv[])
 	int *total;
 
 	if (argc != 3 || !(_isdigit(argv[1])) || !(_isdigit(argv[2])))
-		puts("Error"), exit(98);
+	{
+		puts("Error");
+		exit(98);
+	}
 	n1 = _strlen(argv[1]);
 	n2 = _strlen(argv[2]);
 	len = n1 + n2;
