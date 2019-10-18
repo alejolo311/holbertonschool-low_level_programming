@@ -83,5 +83,6 @@ int main(int argc, char *argv[])
 	for (; i < len; i++)
 		printf("%d", total[i]);
 	printf("\n");
+	free(total);
 	return (0);
 }
