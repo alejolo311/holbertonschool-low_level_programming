@@ -12,7 +12,7 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i,j;
+	int i, j;
 	char *p, *q;
 
 	struct dog *new_dog;
@@ -48,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (new_dog);
 }
 /**
- * _strlen_recursion - this functions prints the lenght of a string
+ * _strlen - this functions prints the lenght of a string
 (* a blank line
 *@s: string to print.
 * Description: this function prints the lenght of a string?
