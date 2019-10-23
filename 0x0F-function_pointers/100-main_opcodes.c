@@ -12,7 +12,6 @@ int main(int argc, char *argv[])
 {
 	int i, n;
 
-	i = 0;
 
 	if (argc != 2)
 	{
@@ -26,13 +25,13 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	while (i < n)
+	for (i = 0; i < n; i++)
 	{
 		printf("%02hhx", *((char *)main + i));
 		if (i < n)
 			printf(" ");
-		i++;
+		else
+			printf("\n");
 	}
-	printf("\n");
 	return (0);
 }
