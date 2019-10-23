@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	char *ope;
 	char op;
-	int a, b, answer;
+	int n1, n2, result;
 	int (*p)(int, int);
 
 	if (argc < 4 || argc > 4)
