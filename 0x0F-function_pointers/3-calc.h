@@ -3,7 +3,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * struct op - Short description
+ * @op: the operator to ve examined
+ * @f: pointer to function.
+ *
+ * Description: Longer description
+ */
 typedef struct op
 {
 	char *op;
