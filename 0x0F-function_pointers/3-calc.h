@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * struct op - Short description
  * @op: the operator to ve examined
