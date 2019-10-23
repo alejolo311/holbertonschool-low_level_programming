@@ -14,9 +14,9 @@ int (*get_op_func(char *s))(int, int)
 
 	for (i = 0; i < 5; i++)
 	{
-		if (*s == ops[i]->op)
+		if (*s == *(ops[i]).op)
 		{
-			return (ops[i]->f);
+			return (*(ops[i]).f);
 		}
 	}
 	return (NULL);
