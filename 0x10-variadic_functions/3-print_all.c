@@ -1,12 +1,22 @@
 #include "variadic_functions.h"
+/**
+ * integer_print - print integers.
+(* a blank line
+*@args: the list of parameters
+* Description: this function prints integers)?
+(* section header: the header of this function is variadic_functions.h)*
+* Return:no return a void func.
+*/
 void integer_print(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
+
 void char_print(va_list args)
 {
 	printf("%c", va_arg(args, int));
 }
+
 void string_print(va_list args)
 {
 	char *s;
@@ -20,6 +30,14 @@ void float_print(va_list args)
 {
 	printf("%f", va_arg(args, double));
 }
+/**
+ * print_all - print anything.
+(* a blank line
+*@format: the paramaters
+* Description: this function prints anything)?
+(* section header: the header of this function is variadic_functions.h)*
+* Return: this function no return
+*/
 
 void print_all(const char * const format, ...)
 {
