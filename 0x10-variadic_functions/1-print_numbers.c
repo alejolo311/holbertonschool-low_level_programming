@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * print numbers - print all the parametes.
+ * print_numbers - print all the parametes.
 (* a blank line
  *@separator: the number of parameters
  *@n: the number of parameters
