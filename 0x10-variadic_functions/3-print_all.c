@@ -25,6 +25,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i, j;
+	char *separator;
 	args_t arguments[] = {
 		{"c", char_print},
 		{"i", integer_print},
@@ -35,6 +36,7 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 	i = 0;
+	separator = "";
 
 	while (format != NULL && *(format + i) != '\0')
 	{
@@ -43,9 +45,9 @@ void print_all(const char * const format, ...)
 		{
 			if (*(format + i) == *(arguments[j]).format)
 			{
+				printf("%s", separator);
 				arguments[j].function(args);
-				if (*(format + i + 1))
-					printf(", ");
+				separator = ", ";
 
 			}
 			j++;
