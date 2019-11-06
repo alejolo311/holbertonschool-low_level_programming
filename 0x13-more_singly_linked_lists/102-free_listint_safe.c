@@ -12,6 +12,10 @@ size_t free_listint_safe(listint_t **h)
 	size_t i;
 
 	i = 0, actual = *h;
+
+	if (h == NULL || *h == NULL)
+		return (i);
+
 	while (actual)
 	{
 		tmp = actual;
