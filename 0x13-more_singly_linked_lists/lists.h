@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define IKNOW '\0'
+#define MAYBEIKNOW head
+#define IMPOSIBLEKNOW next
+
 /**
  * struct listint_s - singly linked list
  * @n: integer to store
