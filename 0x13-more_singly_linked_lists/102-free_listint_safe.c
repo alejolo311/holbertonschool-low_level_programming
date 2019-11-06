@@ -10,21 +10,27 @@ size_t free_listint_safe(listint_t **h)
 {
 	listint_t *tmp, *actual;
 	size_t i;
+	int rest;
 
 	i = 0, actual = *h;
 
-	if (h == NULL || *h == NULL)
-		return (i);
-
 	while (actual)
 	{
-		tmp = actual;
-		actual = actual->next;
-		free(tmp);
-		i++;
-
-		if (tmp < actual)
+		actual = actual - actual->next;
+		if (rest > 0)
+		{
+			tmp = actual->next;
+			free(actual);
+			actual = tmp;
+			i++;
+		} else
+		{
+			free(actuañ);
+			*h = NULL;
+			i++;
 			break;
+		}
+
 	}
 
 	*h = NULL;
