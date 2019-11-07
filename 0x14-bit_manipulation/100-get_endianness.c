@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
  * get_endianness - get the endiannes of the arch
  * Description: get the endiannes of the arch
@@ -6,7 +6,7 @@
  * Return: 1 in little indian - 0 in big indian.
  */
 
-int get_endianness(void);
+int get_endianness(void)
 {
 	unsigned int i = 1;
 	char *c = (char *)&i;
