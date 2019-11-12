@@ -1,10 +1,11 @@
 #include "holberton.h"
 /**
- * binary_to_uint - convert binary to decimal.
- * @b: the binary number in string format
- * Description: convert binary to decimal
- * section header: the header of this function is header.h
- * Return: this return the convert number.
+ * read_textfile - read a file.
+ * @filename: the file to read.
+ * @letters: the number of chars to read
+ * Description: read a file
+ * section header: the header of this function is holberton.h
+ * Return: this return the number of chars.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -14,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	buffer = malloc(letters + 1);
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 		return (0);
 
@@ -31,11 +32,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	buffer[letters] = '\0';
-	_write = write(1, buffer, _read);
-	if (_write == -1)
+	_write = write(STDOUT_FILENO, buffer, _read);
+	if (_write == -1 || _write != _read)
 	{
-		free(buffer);
 		return (0);
 	}
 
