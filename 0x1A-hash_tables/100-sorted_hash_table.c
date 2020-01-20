@@ -49,8 +49,10 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (element == NULL)
 		exit(1);
 	element->key = strdup(key);
+	if (element->key == NULL)
+		exit(1);
 	element->value = strdup(value);
-	if (element->value == NULL || element->key == NULL)
+	if (element->value == NULL)
 		exit(1);
 	element->next = ht->array[index], element->sprev = NULL;
 	element->snext = NULL, ht->array[index] = element;
