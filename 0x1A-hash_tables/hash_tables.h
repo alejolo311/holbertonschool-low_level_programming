@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -87,6 +88,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key);
 void shash_table_print(const shash_table_t *ht);
 void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
+void insert(shash_table_t *ht, shash_node_t *new_node);
 
 
 #endif /* HASH_TABLES_H */
