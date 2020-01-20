@@ -31,11 +31,13 @@ shash_table_t *shash_table_create(unsigned long int size)
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
-	shash_node_t *element, *actual = ht->array[index];
+	unsigned long int index;
+	shash_node_t *element, *actual;
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
+	index = key_index((const unsigned char *)key, ht->size);
+	actual = ht->array[index];
 	while (actual != NULL)
 	{
 		if (strcmp(actual->key, key) == 0)
