@@ -12,8 +12,7 @@ int interpolation_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	
-    e = size - 1;
+	e = size - 1;
 	s = 0;
 	while (s <= e)
 	{
