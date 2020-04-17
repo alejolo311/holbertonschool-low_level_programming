@@ -27,7 +27,7 @@ int exponential_search(int *array, size_t size, int value)
 	return (helperexp(array, s / 2, e, value));
 }
 /**
- * exponential_search - search for a number in a exponential way
+ * helperexp - search for a number in a exponential way
  * @array: the input
  * @s: the beginning
  * @e: the end
