@@ -13,9 +13,9 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 
 	if (list == NULL)
 		return (NULL);
-    s = 0;
-    e = size - 1;
-    st = sqrt(size);
+	s = 0;
+	e = size - 1;
+	st = sqrt(size);
 	actual = list;
 	while (s < e)
 	{
